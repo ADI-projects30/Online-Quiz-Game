@@ -127,7 +127,7 @@ console.log(timeOut)
       ))}
       <Box mt={5}>
         Score: 2/6
-        {/* Score: {score} / {response.results.length} */}
+        Score: {score} / {response.results!==undefined && response.results.length}
       </Box>
     </Box>
   );
