@@ -47,7 +47,7 @@ const QuestionsPage = () => {
   const [timeOut, setTimeOut] = useState(false);
 
   useEffect(() => {
-    console.log('eeee')
+    // console.log('eeee')
     if (response !== undefined && response.results !== undefined){
       console.log(response.results)
     if (response && response.results.length) {
@@ -64,6 +64,17 @@ const QuestionsPage = () => {
     }
   }
   }, [response, questionIndex]);
+console.log(timeOut)
+  if (timeOut) {
+    //  setQuestionIndex(questionIndex + 1)
+    //  setTimeOut(false)
+     if (questionIndex + 1 < response.results.length) {
+      setQuestionIndex(questionIndex + 1);
+     setTimeOut(false)
+    } else {
+      navigate("/score");
+    }
+  }
   
   // if (loading) {
   //   return (
@@ -86,17 +97,17 @@ const QuestionsPage = () => {
     }
   };
 
-  const handleTimeOver  = () => {
-    dispatch(skipQuestion(questionIndex + 1));
-    console.log('4444')
-    setQuestionIndex(questionIndex + 1)
-    }
+  // const handleTimeOver  = () => {
+  //   dispatch(skipQuestion(questionIndex + 1));
+  //   console.log('4444')
+  //   setQuestionIndex(questionIndex + 1)
+  //   }
 
   return (
     <Box>
       <Typography variant="h4">Questions </Typography>
-      <Typography mt={5}>iiii
-        {/* {response && decode(response.results[questionIndex].question)} */}
+      <Typography mt={5}> 
+        {response.results!==undefined && decode(response.results[questionIndex].question)}
       </Typography>
       
       <div className="top">

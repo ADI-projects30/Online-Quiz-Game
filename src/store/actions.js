@@ -3,7 +3,7 @@ export const CHANGE_DIFFICULTY = "CHANGE_DIFFICULTY";
 export const CHANGE_TYPE = "CHANGE_TYPE";
 export const CHANGE_AMOUNT = "CHANGE_AMOUNT";
 export const CHANGE_SCORE = "CHANGE_SCORE";
-export const SKIP_QUESTION = "SKIP_QUESTION";
+export const SKIP_QUESTION = "SKIP_QUESTION"
 
 export const handleCategoryChange = (payload) => ({
     type: CHANGE_CATEGORY,
@@ -30,7 +30,7 @@ export const handleCategoryChange = (payload) => ({
     payload,
   });
 
-  export const skipQuestion = (payload) => ({    
+  export const skipQuestion = (questionIndex) => ({    
         type: SKIP_QUESTION,
-        payload,
+        questionIndex,
     });
