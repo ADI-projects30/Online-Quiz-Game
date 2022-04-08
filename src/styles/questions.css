@@ -6,10 +6,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute; */
     bottom: 10px;
-    left: 80px;
+    /* left: 80px; */
     font-size: 30px;
     font-weight: 700;
+    display:inline-flex;
+    margin-top: 15px;
   }
+  
+  .answers {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+
+  }
+
+  .answer.default {
+    background: color #42a5f5;
+  }
+
+  .answer.right {
+    background-color: #028e00;
+    animation: correct 3s ease forwards;
+
+
+  }
+
+  .answer.wrong {
+    background-color: #ef0619;
+
+  }
+
+  .button.clue {
+    background-color: #f4f0bd;
+  }
+
+
+  .MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.clue.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background-color: brown;
+  }
+
+
   

@@ -7,6 +7,8 @@ import {
   handleDifficultyChange,
   handleTypeChange,
 } from "../store/actions";
+import '../styles/options.css';
+
 
 const FieldOptions = (props) => {
   const { label, options } = props;
@@ -34,9 +36,8 @@ const FieldOptions = (props) => {
   };
   return (
     <Box mt={8}>
-    <FormControl fullWidth>
+    <FormControl fullWidth={true} margin="none">
         <InputLabel> {label} </InputLabel>
-
         <Select value={value} label={label} onChange={handleChange}>
         {options && options.map(({ id, name }) => (
             <MenuItem value={id} key={id}>
