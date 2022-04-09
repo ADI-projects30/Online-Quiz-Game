@@ -1,10 +1,9 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
+import { Box, Button, TextField } from "@mui/material"
 import FieldOptions from "../templates/FieldOptions"
 import GetApiData from "../hooks/GetApiData";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { handleAmountChange } from "../store/actions";
-import { useEffect, useState } from "react";
 import '../App.css';
 // import '../styles/options.css';
 
@@ -14,7 +13,7 @@ const OptionsPage = () => {
   const handleChange = (e) => {
     dispatch(handleAmountChange(e.target.value));
   };
-  const { response, error, loading } = GetApiData({ url: "/api_category.php" });
+  const { response } = GetApiData({ url: "/api_category.php" });
   const navigate = useNavigate();
  
 

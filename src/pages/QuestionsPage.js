@@ -34,8 +34,6 @@ const QuestionsPage = () => {
     amount_of_question,
     score,
   } = useSelector((state) => state);
-  // console.log('ffff')
-  // console.log(amount_of_question, question_category, question_difficulty, question_type);
   let apiUrl = `/api.php?amount=${amount_of_question}`;
   if (question_category) {
     apiUrl = apiUrl.concat(`&category=${question_category}`);
@@ -47,9 +45,7 @@ const QuestionsPage = () => {
     apiUrl = apiUrl.concat(`&type=${question_type}`);
   }
 
-  const { response, error, loading } = GetApiData({ url: apiUrl });
-  // console.log('bbbbb')
-  // console.log(response.results)
+  const { response } = GetApiData({ url: apiUrl });
   const [questionIndex, setQuestionIndex] = useState(0);
   const [options, setOptions] = useState([]);
   const [optionsFifty, setOptionsFifty] = useState([]);
@@ -90,12 +86,6 @@ const QuestionsPage = () => {
     }
   }
 
-  const delay = (duration, callback) => {
-    setTimeout(() => {
-      callback();
-    }, duration);
-  };
-
   const handleClickAnswer = (e) => {
     const question = response.results[questionIndex];
     if (e.target.textContent === question.correct_answer) {
@@ -125,9 +115,11 @@ const QuestionsPage = () => {
   return (
     <div className="html">
     <Box className="center">
-      <Typography mt={5}> 
+    <Box mt={5}>
+      
         {response.results!==undefined && decode(response.results[questionIndex].question)}
-      </Typography>
+        </Box>
+      
       <div className="answers">
        {options && options.map((data, id) => (
         <Box mt={2} key={id}>

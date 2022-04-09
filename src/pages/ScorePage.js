@@ -1,5 +1,4 @@
-import { Button, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
@@ -7,7 +6,6 @@ import { handleAmountChange, handleScoreChange } from "../store/actions";
 import Confetti from "react-confetti";
 import '../App.css';
 import '../styles/yourscore.css';
-
 
 
 
@@ -23,20 +21,14 @@ const ScorePage = () => {
   };
 
   return (
-    // <Box mt={30}>
-      // <Typography variant="h3" fontWeight="bold" mb={3}>
-      //   Final Score {score}
-      // </Typography>
-    //   <Button onClick={handleBackToSettings} variant="outlined">
-    //     back to settings!
-    //   </Button>
-    // </Box>
     <><div className="up"><Confetti /></div>
    
 <div className="center middle">
-<Typography variant="h3" fontWeight="bold" mb={3}>
+<Box mt={5}>
+{/* <Typography variant="h3" fontWeight="bold" mb={3}> */}
         your score is: {score}
-      </Typography>
+      {/* </Typography> */}
+      </Box>
       <Button color="error" onClick={handleBackToSettings} variant="outlined">
         Again?
        </Button>
