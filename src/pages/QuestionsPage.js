@@ -40,7 +40,7 @@ const QuestionsPage = () => {
   if (question_type) {
     apiUrl = apiUrl.concat(`&type=${question_type}`);
   }
-console.log(apiUrl)
+
   const { response } = GetApiData({ url: apiUrl });
   const [questionIndex, setQuestionIndex] = useState(0);
   const [options, setOptions] = useState([]);
@@ -82,6 +82,7 @@ console.log(apiUrl)
       setQuestionIndex(questionIndex + 1);
      setTimeOut(false)
     } else {
+      dispatch(handleScoreChange((score/response.results.length)* 100))
       navigate("/yourscore");
     }
   }
@@ -98,6 +99,7 @@ console.log(apiUrl)
     if (questionIndex + 1 < response.results.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
+      dispatch(handleScoreChange((score/response.results.length)* 100))
       navigate("/yourscore");
     }
   };
