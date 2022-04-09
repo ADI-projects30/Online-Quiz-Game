@@ -1,7 +1,12 @@
 import { Box, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { handleQuestionsAmountChange, handleScoreChange } from "../store/actions";
+import {
+  handleQuestionsAmountChange,
+  handleScoreChange,
+  handleChangeCategory,
+  handleChangeDifficulty,
+  handleChangeType } from "../store/actions";
 import '../App.css';
 import '../styles/yourscore.css';
 
@@ -13,6 +18,9 @@ const ChooseOtherPage = () => {
   const handleGoSettings = () => {
     disptach(handleScoreChange(0));
     disptach(handleQuestionsAmountChange(50));
+    disptach(handleChangeDifficulty(""));
+    disptach(handleChangeCategory(""));
+    disptach(handleChangeType(""));
     navigate("/");
   };
 
