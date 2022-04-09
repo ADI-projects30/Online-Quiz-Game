@@ -27,9 +27,11 @@ const ScorePage = () => {
       <Box mt={5}>
         You achieved {score}% , Can you beat your own score?
       </Box>
-      <Button color="error" onClick={handleGoSettings} variant="outlined">
-        Again?
-       </Button>
+      <div className="beginning">
+        <Button color="error" onClick={handleGoSettings} variant="outlined">
+          Again?
+        </Button>
+       </div>
     </div>
     </>
   );

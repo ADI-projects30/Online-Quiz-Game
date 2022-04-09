@@ -12,30 +12,30 @@ html {
   background-size: contain;
  }
 
- .up {
-  position: relative;
-  width: 400px;
-  height: 200px;
- }
+.up {
+position: relative;
+width: 400px;
+height: 200px;
+}
 
- .fromtop {
-  padding-top: 21rem;
- }
+.fromtop {
+padding-top: 21rem;
+}
 
- .center {
-  position: absolute;
-  top: 41%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- }
+.center {
+position: absolute;
+top: 41%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
 
- .center-bottom {
-  position: fixed;
-  left: 50%;
-  bottom: 20px;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
- }
+.center-bottom {
+position: fixed;
+left: 50%;
+bottom: 20px;
+transform: translate(-50%, -50%);
+margin: 0 auto;
+}
 
 .MuiTypography-root.MuiTypography-body1.css-1429xgd-MuiTypography-root {
       color: brown;
@@ -43,7 +43,7 @@ html {
       font-size: 20px; font-weight: 600;
       text-align: center;
 
-  }
+}
 
 .App-logo {
   height: 40vmin;

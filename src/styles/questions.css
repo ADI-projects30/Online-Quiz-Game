@@ -13,33 +13,33 @@
     margin-top: 15px;
   }
   
-  .answers {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
+.answers {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
 
-  .answer.default {
-    background: color #42a5f5;
-  }
+.answer.default {
+  background: color #42a5f5;
+}
 
-  .answer.right {
-    background-color: #028e00;
-  }
+.answer.right {
+  background-color: #028e00;
+}
 
-  .answer.wrong {
-    background-color: #ef0619;
-  }
+.answer.wrong {
+  background-color: #ef0619;
+}
 
-  .button.clue {
-    background-color: #f4f0bd;
-  }
+.button.clue {
+  background-color: #f4f0bd;
+}
 
-  .MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.clue.css-sghohy-MuiButtonBase-root-MuiButton-root {
-    background-color: brown;
-  }
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.clue.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background-color: brown;
+}
 
 
   

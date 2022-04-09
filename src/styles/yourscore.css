@@ -8,18 +8,22 @@
     text-align: center;
   }
 
-  .MuiBox-root.css-y1gt6f {
-    color: brown;
-    font-family: 'Comic Sans MS';
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-  }
+.MuiBox-root.css-y1gt6f {
+  color: brown;
+  font-family: 'Comic Sans MS';
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
 
-  .center.MuiBox-root.css-0 {
+.center.MuiBox-root.css-0 {
       margin-top: 10rem;
 }
 
 .middle {
-    margin: 9rem 0 0 0;
+    margin: 6rem 0 0 0;
+}
+
+.beginning {
+  margin: 1rem 0 0 0;
 }

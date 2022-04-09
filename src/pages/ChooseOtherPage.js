@@ -21,9 +21,11 @@ const ChooseOtherPage = () => {
       <Box mt={5}>
       The option you selected does not exist, please try again
       </Box>
-      <Button color="error" onClick={handleGoSettings} variant="outlined">
-          Again?
-      </Button>
+      <div className="beginning">
+        <Button color="error" onClick={handleGoSettings} variant="outlined">
+            Again?
+        </Button>
+      </div>
     </div>
   );
 };

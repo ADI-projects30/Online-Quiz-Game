@@ -82,7 +82,7 @@ const QuestionsPage = () => {
       setQuestionIndex(questionIndex + 1);
      setTimeOut(false)
     } else {
-      dispatch(handleScoreChange(((score/response.results.length).toFixed(2))* 100));
+      dispatch(handleScoreChange(((score/response.results.length).toFixed(2)* 100).toFixed(2)));
       navigate("/yourscore");
     }
   }
@@ -99,7 +99,7 @@ const QuestionsPage = () => {
     if (questionIndex + 1 < response.results.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
-      dispatch(handleScoreChange(((score/response.results.length).toFixed(2))* 100));
+      dispatch(handleScoreChange(((score/response.results.length).toFixed(2)* 100).toFixed(2)));
       navigate("/yourscore");
     }
   };
