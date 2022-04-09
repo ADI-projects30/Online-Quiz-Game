@@ -4,15 +4,8 @@
 
 html {
   width: 100%;
-   /* background-color : red;  */
   background: 
     url("/src/assets/images/triviaPic.png") center;  
-   /* display: flex; 
-  flex-direction: column; */
-  /* height: 100%;
-  margin: 0; */
-  /* position: fixed; */
-  /* top: 0; */
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,12 +21,6 @@ html {
  .fromtop {
   padding-top: 21rem;
  }
- /* .answer.button.MuiBox-root {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
- } */
 
  .center {
   position: absolute;
@@ -50,14 +37,13 @@ html {
   margin: 0 auto;
  }
 
- .MuiTypography-root.MuiTypography-body1.css-1429xgd-MuiTypography-root {
+.MuiTypography-root.MuiTypography-body1.css-1429xgd-MuiTypography-root {
       color: brown;
       font-family: 'Comic Sans MS';
       font-size: 20px; font-weight: 600;
-      /* line-height: 72px; margin: 0 0 24px; */
       text-align: center;
 
-    }
+  }
 
 .App-logo {
   height: 40vmin;

@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
-import { skipQuestion } from "../store/actions";
-import { useDispatch } from "react-redux";
 
 
 const Timer = ({ setTimeOut, questionNumber }) => {
-const dispatch = useDispatch()
-
-    const [timer, setTimer] = useState(50);
+    const [timer, setTimer] = useState(30);
     useEffect(() => {
-        if (timer === 0) dispatch(skipQuestion());
-        console.log(timer)
         if (timer === 0) return setTimeOut(true);
         const interval = setInterval(() => {
           setTimer((prev) => prev - 1);
@@ -18,7 +12,7 @@ const dispatch = useDispatch()
       }, [timer, setTimeOut]);
       
       useEffect(() => {
-        setTimer(50);
+        setTimer(30);
       }, [questionNumber]);
       return timer;
 }

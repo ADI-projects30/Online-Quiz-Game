@@ -4,7 +4,6 @@ import {
     CHANGE_DIFFICULTY,
     CHANGE_SCORE,
     CHANGE_TYPE,
-    SKIP_QUESTION,
   } from "./actions";
   
   const initialState = {
@@ -43,11 +42,6 @@ import {
           ...state,
           score: action.payload,
         };
-        case SKIP_QUESTION:
-            return {
-                ...state,
-                questionIndex: state.questionIndex + 1
-            };
       default:
         return state;
     }

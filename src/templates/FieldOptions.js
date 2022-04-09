@@ -3,9 +3,9 @@ import { MenuItem } from "@mui/material";
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import {
-  handleCategoryChange,
-  handleDifficultyChange,
-  handleTypeChange,
+  handleChangeCategory,
+  handleChangeDifficulty,
+  handleChangeType,
 } from "../store/actions";
 import '../styles/options.css';
 
@@ -20,14 +20,14 @@ const FieldOptions = (props) => {
   
 
     switch (label) {
-      case "Category":
-        dispatch(handleCategoryChange(e.target.value));
+      case "Choose category":
+        dispatch(handleChangeCategory(e.target.value));
         break;
-      case "Difficulty":
-        dispatch(handleDifficultyChange(e.target.value));
+      case "Choose difficulty":
+        dispatch(handleChangeDifficulty(e.target.value));
         break;
-      case "Type":
-        dispatch(handleTypeChange(e.target.value));
+      case "Choose type":
+        dispatch(handleChangeType(e.target.value));
         break;
       default:
         return;

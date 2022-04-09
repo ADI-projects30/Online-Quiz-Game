@@ -40,7 +40,7 @@ const QuestionsPage = () => {
   if (question_type) {
     apiUrl = apiUrl.concat(`&type=${question_type}`);
   }
-
+console.log(apiUrl)
   const { response } = GetApiData({ url: apiUrl });
   const [questionIndex, setQuestionIndex] = useState(0);
   const [options, setOptions] = useState([]);
@@ -93,10 +93,7 @@ const QuestionsPage = () => {
       correctAnswer();
         setIsRight('right');
     } else {wrongAnswer(); 
-        setIsRight('wrong');
-      // delay(6000, () => {
-      //   setIsRight('right');
-      // })   
+        setIsRight('wrong');  
     };
     if (questionIndex + 1 < response.results.length) {
       setQuestionIndex(questionIndex + 1);
@@ -114,20 +111,19 @@ const QuestionsPage = () => {
 
   return (
     <div className="html">
+      {response.results!==undefined && response.results[questionIndex] === undefined ? navigate("/notfound") :
     <Box className="center">
-    <Box mt={5}>
-      
+      <Box mt={5}>
         {response.results!==undefined && decode(response.results[questionIndex].question)}
-        </Box>
-      
+      </Box>
       <div className="answers">
-       {options && options.map((data, id) => (
-        <Box mt={2} key={id}>
-          <Button className={["answer", isRight==='default' ? 'default' : isRight==='right' ? 'right' : 'wrong']} onClick={handleClickAnswer} variant="contained">
-            {decode(data)}
-          </Button>
-        </Box>
-      ))}
+        {options && options.map((data, id) => (
+          <Box mt={2} key={id}>
+            <Button className={["answer", isRight==='default' ? 'default' : isRight==='right' ? 'right' : 'wrong']} onClick={handleClickAnswer} variant="contained">
+              {decode(data)}
+            </Button>
+          </Box>
+        ))}
       </div>
       <Box mt={5}>
         Score: {score} / {response.results!==undefined && response.results.length}
@@ -147,6 +143,7 @@ const QuestionsPage = () => {
           </Button>
         </Box>
     </Box>
+  }
     </div>
   );
 };

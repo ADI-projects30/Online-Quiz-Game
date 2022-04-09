@@ -3,24 +3,23 @@ export const CHANGE_DIFFICULTY = "CHANGE_DIFFICULTY";
 export const CHANGE_TYPE = "CHANGE_TYPE";
 export const CHANGE_AMOUNT = "CHANGE_AMOUNT";
 export const CHANGE_SCORE = "CHANGE_SCORE";
-export const SKIP_QUESTION = "SKIP_QUESTION"
 
-export const handleCategoryChange = (payload) => ({
+export const handleChangeCategory = (payload) => ({
     type: CHANGE_CATEGORY,
     payload,
   });
   
-  export const handleDifficultyChange = (payload) => ({
+  export const handleChangeDifficulty = (payload) => ({
     type: CHANGE_DIFFICULTY,
     payload,
   });
   
-  export const handleTypeChange = (payload) => ({
+  export const handleChangeType = (payload) => ({
     type: CHANGE_TYPE,
     payload,
   });
   
-  export const handleAmountChange = (payload) => ({
+  export const handleQuestionsAmountChange = (payload) => ({
     type: CHANGE_AMOUNT,
     payload,
   });
@@ -29,8 +28,3 @@ export const handleCategoryChange = (payload) => ({
     type: CHANGE_SCORE,
     payload,
   });
-
-  export const skipQuestion = (questionIndex) => ({    
-        type: SKIP_QUESTION,
-        questionIndex,
-    });

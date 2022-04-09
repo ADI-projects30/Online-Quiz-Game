@@ -1,18 +1,14 @@
 import { Box, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { handleQuestionsAmountChange, handleScoreChange } from "../store/actions";
-import Confetti from "react-confetti";
 import '../App.css';
 import '../styles/yourscore.css';
 
 
-
-const ScorePage = () => {
+const ChooseOtherPage = () => {
   const disptach = useDispatch();
   const navigate = useNavigate()
-  const { score } = useSelector((state) => state);
 
   const handleGoSettings = () => {
     disptach(handleScoreChange(0));
@@ -21,18 +17,15 @@ const ScorePage = () => {
   };
 
   return (
-    <><div className="up"><Confetti /></div>
-   
     <div className="center middle">
       <Box mt={5}>
-        your score is: {score}
+      The option you selected does not exist, please try again
       </Box>
       <Button color="error" onClick={handleGoSettings} variant="outlined">
-        Again?
-       </Button>
+          Again?
+      </Button>
     </div>
-    </>
   );
 };
 
-export default ScorePage
+export default ChooseOtherPage

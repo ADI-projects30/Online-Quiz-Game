@@ -8,6 +8,7 @@ import {
 import OptionsPage from "./pages/OptionsPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ScorePage from "./pages/ScorePage";
+import ChooseOtherPage from "./pages/ChooseOtherPage";
 
 
 
@@ -22,6 +23,8 @@ function App() {
         <Route path ="/questions" element={<QuestionsPage />}>
         </Route>
         <Route path ="/yourscore" element={<ScorePage />}>
+        </Route>
+        <Route path ="/notfound" element={<ChooseOtherPage />}>
         </Route>
     </Routes>
       </Box>
