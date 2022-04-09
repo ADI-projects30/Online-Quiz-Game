@@ -1,3 +1,18 @@
+# 👋 Welcome to: So you think you're smart!
+
+# Instructions:
+You can choose from any combination of category, difficulty level, type of questions and number of questions.
+
+If no question number is entered, the number of questions to be displayed will be 50.
+
+When a correct answer is selected all the answer buttons will change color to green.
+When an incorrect answer is selected all the answer buttons will change their color to red
+Turn on speakers for another experience. With each response, a sound will be heard according to the correctness of the answer.
+
+When you are not sure what to do and would like help, press the 50/50 button, which will eliminate two answers.
+
+May the odds be ever in your favor!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
