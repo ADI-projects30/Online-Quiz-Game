@@ -13,7 +13,6 @@ import '../App.css';
 import '../styles/yourscore.css';
 
 
-
 const ScorePage = () => {
   const disptach = useDispatch();
   const navigate = useNavigate()

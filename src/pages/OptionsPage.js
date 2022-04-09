@@ -39,13 +39,17 @@ const OptionsPage = () => {
       <FieldOptions options={response.trivia_categories} label="Choose category" />
       <FieldOptions options={difficultyOptions} label="Choose difficulty" />
       <FieldOptions options={typeOptions} label="Choose type" />
-      <TextField color="error" focused fullWidth  margin="dense" mt={3} id="filled-basic" label="Number of questions?" variant="outlined" inputProps={{ type: 'number', min: 1, max: 50}} onChange={handleChange}/>
+      <TextField 
+        color="error" focused fullWidth margin="dense" mt={3} id="filled-basic" 
+        label="Number of questions?" variant="outlined" 
+        inputProps={{ type: 'number', min: 1, max: 50}} 
+        onChange={handleChange}
+      />
       <Box mt={3} width="100%">
         <Button color="error" fullWidth variant="contained" type="submit">
           Do you have what it takes?
         </Button>
       </Box>
-
     </form>
     </div>
   )

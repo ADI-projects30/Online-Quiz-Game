@@ -121,7 +121,9 @@ const QuestionsPage = () => {
       <div className="answers">
         {options && options.map((data, id) => (
           <Box mt={2} key={id}>
-            <Button className={["answer", isRight==='default' ? 'default' : isRight==='right' ? 'right' : 'wrong']} onClick={handleClickAnswer} variant="contained">
+            <Button 
+              className={["answer", isRight==="default" ? "default" : isRight==="right" ? "right" : "wrong"]} 
+              onClick={handleClickAnswer} variant="contained">
               {decode(data)}
             </Button>
           </Box>
