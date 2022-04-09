@@ -44,7 +44,6 @@ import {
           score: action.payload,
         };
         case SKIP_QUESTION:
-          console.log('action');
             return {
                 ...state,
                 questionIndex: state.questionIndex + 1

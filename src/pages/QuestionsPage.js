@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 import { decode } from "html-entities";
 import { useEffect, useState } from "react";
@@ -19,10 +19,6 @@ import '../App.css';
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
 };
-
-const randomInteger = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 const QuestionsPage = () => {
   const navigate = useNavigate();
@@ -59,19 +55,23 @@ const QuestionsPage = () => {
     if (response && response.results.length) {
       const question = response.results[questionIndex];
       let answers = [...question.incorrect_answers];
-      let fiftyFifty = [[...question.incorrect_answers][randomInteger(0,2)]];
+      let fiftyFifty = [[...question.incorrect_answers][getRandomInt(question.incorrect_answers.length)]];
+      fiftyFifty.splice(
+        getRandomInt(2),
+        0,
+        question.correct_answer
+      );
+      setOptionsFifty(fiftyFifty)
+      if (answers.length > 2) {
       answers.splice(
         getRandomInt(question.incorrect_answers.length),
         0,
         question.correct_answer
       );
       setOptions(answers);
-      fiftyFifty.splice(
-        getRandomInt(randomInteger(0,2)),
-        0,
-        question.correct_answer
-      );
-      setOptionsFifty(fiftyFifty)
+      } else {
+        setOptions(fiftyFifty)
+      }
     }
   }
   }, [response, questionIndex]);

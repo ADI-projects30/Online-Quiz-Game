@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 const Timer = ({ setTimeOut, questionNumber }) => {
 const dispatch = useDispatch()
 
-    const [timer, setTimer] = useState(5);
+    const [timer, setTimer] = useState(50);
     useEffect(() => {
         if (timer === 0) dispatch(skipQuestion());
         console.log(timer)
@@ -18,7 +18,7 @@ const dispatch = useDispatch()
       }, [timer, setTimeOut]);
       
       useEffect(() => {
-        setTimer(5);
+        setTimer(50);
       }, [questionNumber]);
       return timer;
 }
